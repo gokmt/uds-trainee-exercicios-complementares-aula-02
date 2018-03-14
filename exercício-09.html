@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício 09</title>
+  </head>
+  <body>
+    <p>Escreva uma função para ler 2 valores, o sistema deve validar e não permitir valores iguais,
+       e então alertar o maior deles.</p>
+
+    <script type="text/javascript">
+      while (valor1 === valor2) {
+        var valor1 = parseInt(prompt("Digite o primeiro valor: "));
+        var valor2 = parseInt(prompt("Digite o segundo valor: "));
+      }
+      maiorValor(valor1, valor2);
+      function maiorValor(valor1, valor2){
+        if(valor1 > valor2){
+          alert("O primeiro valor: " + valor1 + " é maior que o segundo valor: " + valor2);
+        }else{
+          alert("O segundo valor: " + valor2 + " é maior que o primeiro valor: " + valor1);
+        }
+      }
+    </script>
+  </body>
+</html>
