@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício 12</title>
+  </head>
+  <body>
+    <p> Para cada conjunto de valores abaixo, escreva o código, usando laço(s), que preencha um array com os valores:</p>
+    <p>10 9 8 7 6 5 4 3 2 1</p>
+    <p>0 1 4 9 16 25 36 49 64 81 100</p>
+    <p>1 2 3 4 5 10 20 30 40 50</p>
+    <p>3 4 7 12 19 28 39 52 67 84</p>
+
+    <script type="text/javascript">
+
+      function preenchendoArrayUm(){
+        var array1 = [];
+        for (var i = 10; i >= 1; i--) {
+          array1.push(i);
+        }
+        alert("Primeiro Exercício: " +array1);
+      }
+
+      function preenchendoArrayDois(){
+        var array2 = [];
+        for (var i = 0; i <= 10; i++) {
+          array2.push(i*i);
+        }
+        alert("Segundo Exercício: " + array2);
+      }
+
+      function preenchendoArrayTres(){
+        var array3 = [];
+        var arrayAuxiliar1 = [];
+        var arrayAuxiliar2 = [];
+        for (var i = 1; i <= 5; i++) {
+          arrayAuxiliar1.push(i);
+          arrayAuxiliar2.push(i*10);
+          array3 = arrayAuxiliar1.concat(arrayAuxiliar2);
+        }
+        alert("Terceiro Exercício: " + array3);
+      }
+
+      function preenchendoArrayQuatro(){
+
+      }
+      var array4 = [];
+      var auxiliar;
+      for (var i = 1; i < 10; i++) {
+        if (i%2 === 0) {
+          array4.push(i);
+        }else if(i%2 !== 0){
+          auxiliar = i++;
+          array4.push(i+auxiliar);
+        }
+      }
+      alert(array4);
+
+    </script>
+  </body>
+</html>
