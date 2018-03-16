@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício 13</title>
+  </head>
+  <body>
+    <p>Usando o objeto Date, crie um script que apresente a data no formato: dd/mm/aaaa.</p>
+    <script type="text/javascript">
+    formatarData();
+    function formatarData(){
+      var data = new Date();
+      var dia = data.getDate();
+      //data.getDay -- traz o número do dia da semana Exemplo: segunda-1, terça-2, quarta-3, quinta-4, sexta-5
+      var mes = data.getMonth()+1;
+      //Janeiro começa com valor zero, por isso acrescente +1 na hora de apresentar.
+      var ano = data.getFullYear();
+      alert(dia+"/"+mes+"/"+ano);
+    }
+    </script>
+  </body>
+</html>

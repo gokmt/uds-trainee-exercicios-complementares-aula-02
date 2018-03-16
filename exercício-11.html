@@ -10,6 +10,7 @@
       var  array = [];
       var  array2 = [];
       var  valoresNegativos = [];
+      var  contador = 0;
       armazenarValor();
       encontrarValorNegativo();
       function armazenarValor(){
@@ -24,9 +25,10 @@
           array2.push(array[i]);
           if(array2[i] < 0){
             valoresNegativos.push(array[i]);
+            contador++;
           }
         }
-          alert("Os valores negativos encontrados foram: "+ valoresNegativos);
+          alert("Os valores negativos encontrados foram: "+ valoresNegativos + ". Quantidade: " + contador);
         }
 
     </script>
