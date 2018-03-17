@@ -15,7 +15,155 @@
     <p>que retorne os números impares existentes na propriedade números;</p>
     <p>que retorne a soma dos números existentes na propriedade números;</p>
     <p>Observação: Não deve ser possível adicionar valores não números na propriedade números;</p>
+
+
     <script type="text/javascript">
+
+      var meuObjeto = {
+        numeros: [666],
+        adicionarNumero:function(numero){
+          meuObjeto.numeros.push(numero);
+          alert("O Número " + numero + " foi adicionado com sucesso!"+
+          "\nNovo conjunto: " + meuObjeto.numeros);
+        },
+        verificarNumero:function(numero){
+          for (var i = 0; i <= meuObjeto.numeros.length; i++) {
+            if (meuObjeto.numeros[i] === numero) {
+              alert("O número " + numero + " está no array.");
+            }else {
+              alert("Infelizmente o número " + numero + " não está no array.");
+            }
+          }
+        },
+        removerNumero:function(numero){
+          var auxiliar = 1;
+          for (var i = 0; i <= meuObjeto.numeros.length; i++) {
+            if (meuObjeto.numeros[i] === numero) {
+              meuObjeto.numeros.splice(i,1);
+              auxiliar = auxiliar - auxiliar;
+              alert("O número " + numero + " foi removido com sucesso!");
+            }
+          }
+          if (auxiliar === 1) {
+            alert("O número " + numero + " não foi encontrado!");
+          }
+        },
+        numerosPositivos:function(){
+          var aux = [];
+          for (var i = 0; i <= meuObjeto.numeros.length; i++) {
+            if (meuObjeto.numeros[i] >= 0) {
+              aux.push(meuObjeto.numeros[i]);
+            }
+          }
+          if (aux.length <= 0) {
+            alert("Não foi encontrado número negativo!");
+          }else{
+            alert("Os números positivos são: " + aux);
+          }
+        },
+
+        numerosNegativos:function(){
+          var aux = [];
+          for (var i = 0; i <= meuObjeto.numeros.length; i++) {
+            if (meuObjeto.numeros[i] < 0) {
+              aux.push(meuObjeto.numeros[i]);
+            }
+          }
+          if (aux.length <= 0) {
+            alert("Não foi encontrado número negativo!");
+          }else{
+            alert("Os números negativos são: " + aux);
+          }
+        },
+
+        numerosPares:function(){
+          var aux = [];
+          for (var i = 0; i < meuObjeto.numeros.length; i++) {
+            if (meuObjeto.numeros[i]%2 === 0) {
+              aux.push(meuObjeto.numeros[i]);
+            }
+          }
+          if (aux.length <= 0) {
+            alert("Não foi encontrado nenhum número par!");
+          }else{
+            alert("Os números pares são: " + aux);
+          }
+        },
+
+        numerosImpares:function(){
+          var aux = [];
+          for (var i = 0; i < meuObjeto.numeros.length; i++) {
+            if (meuObjeto.numeros[i]%2 !== 0) {
+              aux.push(meuObjeto.numeros[i]);
+            }
+          }
+          if (aux.length <= 0) {
+            alert("Não foi encontrado nenhum número impar!");
+          }else{
+            alert("Os números impares são: " + aux);
+          }
+        },
+
+        somaNumeros:function(){
+          var soma = 0;
+          for (var i = 0; i < meuObjeto.numeros.length; i++) {
+            soma += meuObjeto.numeros[i];
+          }
+            alert("A soma dos números é: " + soma);
+        }
+      };
+
+      meuObjeto.adicionarNumero(500);
+      meuObjeto.adicionarNumero(135);
+      meuObjeto.adicionarNumero(-100);
+      meuObjeto.removerNumero(200);
+      alert(meuObjeto.numeros);
+      meuObjeto.numerosPositivos();
+      meuObjeto.numerosNegativos();
+      meuObjeto.numerosPares();
+      meuObjeto.numerosImpares();
+      meuObjeto.somaNumeros();
+      /*
+      var meuObjeto = {};
+      meuObjeto.numeros =[];
+
+      var opcao = parseInt(prompt("Escolha uma opcão:"+
+      "\n1 - Adicionar número"+
+      "\n2 - Adicionar número"));
+      switch (parseInt(opcao)) {
+        case 1:
+          adicionarNumero();
+        break;
+        case 2:
+          adicionarNumero();
+        break;
+        case 3:
+          adicionarNumero();
+        break;
+        case 4:
+          adicionarNumero();
+        break;
+        default:
+      }
+
+      function adicionarNumero(){
+        var conf = true;
+        while (conf) {
+          meuObjeto.numeros.push(prompt("Digite um número: "));
+          conf = confirm("Deseja continuar?");
+        }
+        for (var i = 0; i < meuObjeto.numeros.length; i++) {
+          alert(meuObjeto.numeros[i]);
+        }
+        alert(meuObjeto.numeros);
+      }
+
+      function verificarNumero(){
+        var numero = parseInt(prompt("Escolha um número a ser verificado: "));
+        for (var i = 0; i < array.length; i++) {
+
+        }
+      }*/
 
     </script>
   </body>
