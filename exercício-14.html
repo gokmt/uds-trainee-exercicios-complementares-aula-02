@@ -22,9 +22,13 @@
       var meuObjeto = {
         numeros: [666],
         adicionarNumero:function(numero){
-          meuObjeto.numeros.push(numero);
-          alert("O Número " + numero + " foi adicionado com sucesso!"+
-          "\nNovo conjunto: " + meuObjeto.numeros);
+          if(parseInt(numero)){
+            meuObjeto.numeros.push(numero);
+            alert("O Número " + numero + " foi adicionado com sucesso!"+
+            "\nNovo conjunto: " + meuObjeto.numeros);
+          }else{
+            alert("Esse elemento não  pode ser inserido, somente números!");
+          }
         },
         verificarNumero:function(numero){
           for (var i = 0; i <= meuObjeto.numeros.length; i++) {
@@ -113,6 +117,7 @@
         }
       };
 
+      meuObjeto.adicionarNumero("r");
       meuObjeto.adicionarNumero(500);
       meuObjeto.adicionarNumero(135);
       meuObjeto.adicionarNumero(-100);
