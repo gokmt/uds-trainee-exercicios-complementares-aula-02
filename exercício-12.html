@@ -42,19 +42,19 @@
       }
 
       function preenchendoArrayQuatro(){
-
-      }
-      var array4 = [];
-      var auxiliar;
-      for (var i = 1; i < 10; i++) {
-        if (i%2 === 0) {
-          array4.push(i);
-        }else if(i%2 !== 0){
-          auxiliar = i++;
-          array4.push(i+auxiliar);
+        var array4 = [];
+        var auxiliar;
+        for (var i = 0; i < 10; i++) {
+              array4.push(i*i + 3);
         }
+        alert("Quarto Exercício: " + array4);
       }
-      alert(array4);
+
+      preenchendoArrayUm();
+      preenchendoArrayDois();
+      preenchendoArrayTres();
+      preenchendoArrayQuatro();
+
 
     </script>
   </body>
