@@ -19,7 +19,66 @@
       mais o acréscimo.</p>
 
       <script type="text/javascript">
-        
+        var cliente = {
+          nome: "Gustavo Okamoto",
+          sexo: "masculino",
+          dataNascimento: "11/07/1996",
+          endereco: {
+            logradouro: "Rua qualquer",
+            numero: "100",
+            complemento: "Casa",
+            bairro: "Zona 05",
+            cidade: "Maringa",
+            estado: "Paraná",
+            cep: "87013-600"
+          },
+          mostrarInformacoesDoCliente: function() {
+            alert("Dados do Cliente:\n" + "\nNome: " + this.nome + "\nSexo: " + this.sexo + "\nData de Nascimento: " + this.dataNascimento + "\nEndereço: " + this.endereco.logradouro + ", "
+            + this.endereco.numero + ", " + this.endereco.complemento + ", " + this.endereco.bairro + ", " + this.endereco.cidade + ", "
+            + this.endereco.estado + ", " + this.endereco.cep);
+          }
+        };
+
+        var produto = {
+          titulo: "Cepo de madeira",
+          descricao: "70cm",
+          valor: 500,
+          mostrarInformacoesDoProduto:function(){
+            alert("Informação do produto:" + "\nTítulo:" + this.titulo + "\nDescrição: " + this.descricao +
+             "\nValor: " + this.valor);
+          }
+        };
+
+        var venda = {
+          data:"10/10/2017",
+          cliente:"",
+          produtos:[],
+          desconto:"",
+          acrescimo:"",
+          adicionarCliente:function(cliente){
+            this.cliente = cliente;
+          },
+          adicionarProduto:function(produto){
+            this.produtos.push(produto);
+          }
+        }
+
+          cliente.mostrarInformacoesDoCliente();
+          produto.mostrarInformacoesDoProduto();
+          venda.adicionarCliente(cliente);
+          venda.adicionarProduto(produto);
+          console.log(cliente);
+          console.log(produto);
+          console.log(venda);
+
+          var opcao;
+          switch (opcao) {
+            case 1:
+                prompt()
+            break;
+            default:
+
+          }
       </script>
   </body>
 </html>
